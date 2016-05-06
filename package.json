@@ -1,0 +1,28 @@
+{
+  "name": "generate-json-webpack-plugin",
+  "version": "0.0.0",
+  "description": "Webpack plugin to generate a custom JSON asset",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elliottsj/generate-json-webpack-plugin.git"
+  },
+  "keywords": [
+    "webpack"
+  ],
+  "author": "Spencer Elliott <me@elliottsj.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/elliottsj/generate-json-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/elliottsj/generate-json-webpack-plugin#readme",
+  "devDependencies": {
+    "eslint": "^2.9.0",
+    "eslint-config-airbnb-base": "^2.0.0",
+    "eslint-plugin-import": "^1.7.0"
+  }
+}
