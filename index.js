@@ -1,4 +1,4 @@
-function GenerateJsonPlugin(filename, { value, replacer, space }) {
+function GenerateJsonPlugin(filename, value, replacer, space) {
   Object.assign(this, { filename, value, replacer, space });
 }
 
