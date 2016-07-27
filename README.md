@@ -1,4 +1,6 @@
 # generate-json-webpack-plugin
+[![npm version](https://img.shields.io/npm/v/generate-json-webpack-plugin.svg)](https://www.npmjs.com/package/generate-json-webpack-plugin)
+
 Webpack plugin to generate a custom JSON asset
 
 ### Installation
