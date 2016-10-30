@@ -6,9 +6,11 @@ language: node_js
 node_js:
   - '4'
   - '6'
+  - 'stable'
 cache:
   directories:
-  - node_modules
+  - $HOME/.yarn-cache
+before_install:
+  - npm install --global yarn
 install:
-  - npm prune
-  - npm install
+  - yarn
