@@ -28,7 +28,28 @@ module.exports = {
 };
 ```
 
-This will create a file `my-file.json` in webpack's output directory, with contents:
+Also you can generate `.json` file from source-module by path to it:
+
+```js
+// source.js
+module.exports = {
+  foo: 'bar'
+}
+
+// webpack.config.js
+const GenerateJsonPlugin = require('generate-json-webpack-plugin');
+
+module.exports = {
+  // ...
+  plugins: [
+    // ...
+    new GenerateJsonPlugin('my-file.json', __dirname + '/source.js')
+  ]
+  // ...
+};
+```
+
+All these cases will create a file `my-file.json` in webpack's output directory, with contents:
 ```json
 {"foo":"bar"}
 ```

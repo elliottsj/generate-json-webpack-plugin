@@ -29,4 +29,28 @@ describe('example', () => {
       );
     });
   }));
+  it('creates a file my-file-from-module.json', () => new Promise((resolve, reject) => {
+    webpack(config, (error, stats) => {
+      if (error) {
+        reject(error);
+      }
+      fs.readFile(
+        path.resolve(stats.compilation.compiler.outputPath, 'my-file-from-module.json'),
+        'utf8',
+        (err, data) => {
+          if (err) {
+            reject(err);
+          }
+          expect(data).toBe(
+            '{\n' +
+            '  "foo": "baz",\n' +
+            '  "one": "two",\n' +
+            '  "module": true\n' +
+            '}'
+          );
+          resolve();
+        }
+      );
+    });
+  }));
 });
