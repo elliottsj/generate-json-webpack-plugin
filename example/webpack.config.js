@@ -20,5 +20,16 @@ module.exports = {
       },
       2
     ),
+    new GenerateJsonPlugin(
+      'my-file-from-module.json',
+      path.join(__dirname, 'module'),
+      (key, value) => {
+        if (value === 'bar') {
+          return 'baz';
+        }
+        return value;
+      },
+      2
+    ),
   ],
 };
