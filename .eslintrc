@@ -1,12 +1,20 @@
 {
-  "extends": "airbnb-base",
+  "parserOptions": {
+    "ecmaVersion": 2015
+  },
   "env": {
     "jasmine": true,
     "jest": true
   },
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
-    "import/no-extraneous-dependencies": ["error", {
-      "devDependencies": true
-    }]
+    "prettier/prettier": [
+      "error", {
+        "trailingComma": "es5",
+        "singleQuote": true
+      }
+    ]
   }
 }

@@ -5,7 +5,7 @@ function GenerateJsonPlugin(filename, value, replacer, space) {
 GenerateJsonPlugin.prototype.apply = function apply(compiler) {
   compiler.plugin('emit', (compilation, done) => {
     const json = JSON.stringify(this.value, this.replacer, this.space);
-    compilation.assets[this.filename] = { // eslint-disable-line no-param-reassign
+    compilation.assets[this.filename] = {
       source: () => json,
       size: () => json.length,
     };
