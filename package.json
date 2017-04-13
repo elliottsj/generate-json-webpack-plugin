@@ -27,7 +27,7 @@
     "eslint-plugin-prettier": "^2.0.1",
     "jest-cli": "^16.0.2",
     "prettier": "^0.22.0",
-    "webpack": "^1.13.1"
+    "webpack": "^2.3.3"
   },
   "jest": {
     "testPathDirs": [
