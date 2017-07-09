@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/elliottsj/generate-json-webpack-plugin#readme",
   "devDependencies": {
-    "eslint": "^3.2.0",
+    "eslint": "^4.2.0",
     "eslint-plugin-prettier": "^2.0.1",
     "jest": "^20.0.4",
     "prettier": "^1.1.0",
