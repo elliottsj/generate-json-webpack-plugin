@@ -27,11 +27,15 @@
     "eslint-plugin-prettier": "^2.0.1",
     "jest": "^21.0.0",
     "prettier": "^1.1.0",
-    "webpack": "^3.1.0"
+    "webpack": "^4.1.1"
   },
   "jest": {
+    "testEnvironment": "node",
     "roots": [
       "<rootDir>/example"
     ]
+  },
+  "engines": {
+    "node": ">=6.11.5"
   }
 }

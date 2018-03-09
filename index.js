@@ -1,17 +1,17 @@
 function GenerateJsonPlugin(filename, value, replacer, space) {
   Object.assign(this, { filename, value, replacer, space });
 
+  this.plugin = { name: 'GenerateJsonPlugin' };
+
   this.previousJson = null;
 }
 
 GenerateJsonPlugin.prototype.apply = function apply(compiler) {
-  compiler.plugin('emit', (compilation, done) => {
+  const emit = (compilation, callback) => {
     const json = JSON.stringify(this.value, this.replacer, this.space);
 
-    // For faster performance on watch mode
     if (this.previousJson === json) {
-      done();
-      return;
+      return callback(null);
     }
 
     compilation.assets[this.filename] = {
@@ -20,8 +20,15 @@ GenerateJsonPlugin.prototype.apply = function apply(compiler) {
     };
 
     this.previousJson = json;
-    done();
-  });
+
+    callback(null);
+  };
+
+  if (compiler.hooks) {
+    compiler.hooks.emit.tapAsync(this.plugin, emit);
+  } else {
+    compiler.plugin('emit', emit);
+  }
 };
 
 module.exports = GenerateJsonPlugin;
