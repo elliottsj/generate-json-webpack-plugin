@@ -34,8 +34,5 @@
     "roots": [
       "<rootDir>/example"
     ]
-  },
-  "engines": {
-    "node": ">=6.11.5"
   }
 }
