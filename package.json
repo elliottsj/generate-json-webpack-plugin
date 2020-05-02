@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "jest": "jest",
-    "format": "prettier --single-quote --trailing-comma es5 --write {.,example/{,__tests__}}/*.js",
-    "lint": "eslint .",
-    "test": "npm run lint && npm run jest"
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "test": "npm run format:check && npm run jest"
   },
   "repository": {
     "type": "git",
@@ -23,11 +23,9 @@
   },
   "homepage": "https://github.com/elliottsj/generate-json-webpack-plugin#readme",
   "devDependencies": {
-    "eslint": "^4.2.0",
-    "eslint-plugin-prettier": "^2.0.1",
-    "jest": "^22.4.2",
-    "prettier": "^1.1.0",
-    "webpack": "^4.1.1"
+    "jest": "25.5.4",
+    "prettier": "2.0.5",
+    "webpack": "4.43.0"
   },
   "jest": {
     "testEnvironment": "node",
