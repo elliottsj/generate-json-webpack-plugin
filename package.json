@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/elliottsj/generate-json-webpack-plugin#readme",
   "devDependencies": {
-    "jest": "26.1.0",
+    "jest": "26.2.1",
     "prettier": "2.0.5",
     "webpack": "4.44.0"
   },
