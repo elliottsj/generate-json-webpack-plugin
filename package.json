@@ -25,7 +25,7 @@
   "devDependencies": {
     "del": "6.0.0",
     "jest": "26.6.3",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "webpack": "5.36.2"
   },
   "jest": {
