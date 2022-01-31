@@ -8,8 +8,13 @@ function GenerateJsonPlugin(filename, value, replacer, space) {
 
 GenerateJsonPlugin.prototype.apply = function apply(compiler) {
   compiler.hooks.compilation.tap(this.plugin, (compilation) => {
-    const json = JSON.stringify(this.value, this.replacer, this.space);
-
+    let json;
+    if (typeof this.value === 'function') {
+      json = JSON.stringify(this.value.call(), this.replacer, this.space);
+    } else {
+      json = JSON.stringify(this.value, this.replacer, this.space);
+    }
+    
     compilation.hooks.processAssets.tap(
       {
         name: this.plugin.name,
